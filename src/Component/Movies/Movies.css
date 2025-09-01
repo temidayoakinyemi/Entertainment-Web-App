@@ -1,0 +1,172 @@
+.movies-page {
+  background-color: #10141e;
+  min-height: 100vh;
+  padding: 20px 40px;
+  color: #fff;
+  margin-left: 100px;
+}
+
+/* Search bar */
+.movies-search-bar {
+  display: flex;
+  align-items: center;
+  width: 381px;
+  height: 32px;
+  margin-bottom: 30px;
+}
+.movies-search-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+.movies-search-bar input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.movies-search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.4979);
+}
+
+/* Section title */
+.movies-section-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 20px 0 10px;
+}
+
+/* Movies grid */
+.movies-grid {
+ display: grid;
+  grid-template-columns: repeat(4, 1fr); /* exactly 4 per row */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.movies-item {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Thumbnail */
+.movies-thumbnail-wrapper {
+  position: relative;
+}
+.movies-thumbnail {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Bookmark overlay */
+.movies-bookmark-overlay {
+  width: 32px;
+  height: 32px;
+  background: rgba(22, 29, 47, 0.5);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2; /* 🔥 makes sure it's above play overlay */
+  transition: all 0.2s ease;
+}
+
+.movies-bookmark-overlay img {
+  width: 12px;
+  height: 14px;
+}
+
+/* Hover effect */
+.movies-bookmark-overlay:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+/* Active state */
+.movies-bookmark-overlay.active {
+  background: #fff;
+}
+
+/* Active + hover (disable scaling) */
+.movies-bookmark-overlay.active:hover {
+  transform: none;
+}
+
+
+/* Info */
+.movies-info {
+  margin-top: 8px;
+}
+.movies-info p {
+  font-size: 13px;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.movies-info h3 {
+  font-size: 16px;
+  margin-top: 4px;
+}
+.movies-category img {
+  width: 12px;
+  height: 12px;
+  filter: brightness(0) invert(1); /* makes icon white */
+}
+
+/* Center Play button overlay (movie specific) */
+.movie-play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 8px; /* match thumbnail */
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1; /* sits below bookmark */
+}
+
+.movies-thumbnail-wrapper:hover .movie-play-overlay {
+  opacity: 1;
+}
+
+.movie-play-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  backdrop-filter: blur(4px);
+  transition: background 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.movie-play-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.movie-play-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.movie-play-button span {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}

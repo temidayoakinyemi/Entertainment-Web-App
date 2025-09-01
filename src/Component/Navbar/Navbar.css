@@ -1,0 +1,65 @@
+.navbar {
+  width: 96px;
+  height: 700px;
+  background-color: #161D2F; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  position: fixed;
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.navbar-logo {
+  display: block;
+}
+
+.navbar-logo img {
+  width: 35px;
+}
+
+.navbar-icons img {
+    width: 16.2px;
+    height: 20px;
+}
+
+.navbar-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: filter 0.2s ease-in-out;
+  outline: none;
+  border: none;
+}
+
+.nav-icon:hover {
+  transform: scale(1.1);
+}
+
+.nav-icon.active {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(104%) contrast(105%);
+}
+
+
+.logout-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.logout-icon:hover {
+  opacity: 0.8;
+}

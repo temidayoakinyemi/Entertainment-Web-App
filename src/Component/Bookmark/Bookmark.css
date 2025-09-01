@@ -1,0 +1,161 @@
+.bookmark {
+  background-color: #10141e;
+  min-height: 100vh;
+  padding: 20px 40px;
+  color: #fff;
+  margin-left: 100px;
+}
+
+/* Search bar */
+.bookmark-search {
+  display: flex;
+  align-items: center;
+  width: 380px;
+  height: 32px;
+  margin-bottom: 30px;
+}
+.bookmark-search img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+.bookmark-search input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.bookmark-search input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Section Titles */
+.bookmark-section {
+  margin-bottom: 2rem;
+}
+.bookmark-section h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 20px 0 10px;
+  color: #fff;
+}
+
+/* Grid layout */
+.bookmark-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* exactly 4 per row */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Card wrapper */
+.bookmark-card {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Thumbnail */
+.bookmark-thumb {
+  position: relative;
+}
+.bookmark-img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Bookmark overlay */
+/* Bookmark overlay */
+.bookmark-overlay {
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  z-index: 2; /* ✅ stays above play overlay dim */
+}
+
+.bookmark-overlay img {
+  width: 12px;
+  height: 14px;
+}
+
+/* Info */
+.bookmark-info {
+  margin-top: 8px;
+}
+.bookmark-meta {
+  font-size: 13px;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.bookmark-meta img {
+  width: 12px;
+  height: 12px;
+  filter: brightness(0) invert(1);
+}
+.bookmark-title {
+  font-size: 16px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* Play overlay */
+.bookmark-play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1; /* ✅ below bookmark overlay */
+}
+.bookmark-thumb:hover .bookmark-play-overlay {
+  opacity: 1;
+}
+
+.bookmark-play-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  backdrop-filter: blur(4px);
+  transition: background 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.bookmark-play-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.bookmark-play-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.bookmark-play-button span {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
