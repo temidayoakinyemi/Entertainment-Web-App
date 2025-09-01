@@ -26,7 +26,7 @@ const Bookmark = () => {
 
   return (
     <div className="bookmark">
-      {/* Search bar */}
+
       <div className="bookmark-search">
         <img src={search} alt="search" />
         <input
@@ -37,7 +37,6 @@ const Bookmark = () => {
         />
       </div>
 
-      {/* Movies Section */}
       <div className="bookmark-section">
         <h2>Bookmarked Movies</h2>
         <div className="bookmark-grid">
@@ -53,7 +52,6 @@ const Bookmark = () => {
                     className="bookmark-img"
                   />
 
-                  {/* Play overlay */}
                   <div className="bookmark-play-overlay">
                     <div className="bookmark-play-button">
                       <img
@@ -65,7 +63,6 @@ const Bookmark = () => {
                     </div>
                   </div>
 
-                  {/* Bookmark overlay */}
                   <div
                     className="bookmark-overlay"
                     onClick={() => toggleBookmark(item)}
@@ -93,7 +90,6 @@ const Bookmark = () => {
         </div>
       </div>
 
-      {/* TV Section */}
       <div className="bookmark-section">
         <h2>Bookmarked TV Series</h2>
         <div className="bookmark-grid">
@@ -109,7 +105,6 @@ const Bookmark = () => {
                     className="bookmark-img"
                   />
 
-                  {/* Play overlay */}
                   <div className="bookmark-play-overlay">
                     <div className="bookmark-play-button">
                       <img
@@ -121,7 +116,6 @@ const Bookmark = () => {
                     </div>
                   </div>
 
-                  {/* Bookmark overlay */}
                   <div
                     className="bookmark-overlay"
                     onClick={() => toggleBookmark(item)}

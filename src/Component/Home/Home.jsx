@@ -22,7 +22,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      {/* Search bar */}
+
       <div className="search-bar">
         <img src={search} alt="search" className="search-icon" />
         <input
@@ -33,7 +33,6 @@ const Home = () => {
         />
       </div>
 
-      {/* Trending Section */}
       <h2 className="section-title">Trending</h2>
       <div className="trending">
         {trending.map((item, index) => (
@@ -44,7 +43,6 @@ const Home = () => {
               className="trending-img"
             />
 
-            {/* Play Overlay */}
             <div className="play-overlay-center">
               <div className="play-button">
                 <img src={play} alt="play" className="play-icon" />
@@ -52,7 +50,6 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Bookmark */}
             <div
               className={`bookmark-overlay1 ${
                 isBookmarked(item) ? "active" : ""
@@ -65,7 +62,6 @@ const Home = () => {
               />
             </div>
 
-            {/* Info */}
             <div className="trending-info">
               <p>
                 {item.year} •{" "}
@@ -84,7 +80,6 @@ const Home = () => {
         ))}
       </div>
 
-      {/* Recommended Section */}
       <h2 className="section-title">Recommended for you</h2>
       <div className="recommended-grid">
         {filteredRecommended.map((item, index) => (
@@ -96,7 +91,6 @@ const Home = () => {
                 className="recommended-thumb"
               />
 
-              {/* Play Overlay */}
               <div className="play-overlay-center">
                 <div className="play-button">
                   <img src={play} alt="play" className="play-icon" />
@@ -104,7 +98,6 @@ const Home = () => {
                 </div>
               </div>
 
-              {/* Bookmark */}
               <div
                 className={`bookmark-overlay1 ${
                   isBookmarked(item) ? "active" : ""
@@ -117,8 +110,7 @@ const Home = () => {
                 />
               </div>
             </div>
-
-            {/* Info */}
+            
             <div className="recommended-info">
               <p>
                 {item.year} •{" "}

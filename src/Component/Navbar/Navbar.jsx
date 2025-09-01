@@ -49,7 +49,6 @@ const Navbar = () => {
           </NavLink>
         </div>
       </div>
-      {/* Spacer to push logout icon to the far right */}
       <div className="nav-spacer"></div>
 
       <div

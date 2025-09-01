@@ -5,7 +5,6 @@ import "./Login.css";
 import movie from "../../assets/movie.png";
 import { useNavigate } from "react-router-dom";
 
-// Email validation function
 const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
 const Login = () => {
@@ -29,14 +28,12 @@ const Login = () => {
 
     if (Object.keys(newErrors).length === 0) {
       try {
-        // after successful login
         await signInWithEmailAndPassword(auth, email, password);
         setSuccess("Logged in successfully!");
         setEmail("");
         setPassword("");
 
-        // ✅ redirect to Navbar instead of /home
-        navigate("/navbar");
+        navigate("/home");
       } catch (err) {
         setErrors({ firebase: "Invalid email or password" });
       }
@@ -49,7 +46,6 @@ const Login = () => {
       <div className="login-div">
         <h1 className="loginh1">Login</h1>
 
-        {/* Email */}
         <div className={`input-group ${errors.email ? "error" : ""}`}>
           <div className="input-wrapper">
             <input
@@ -63,7 +59,6 @@ const Login = () => {
           </div>
         </div>
 
-        {/* Password */}
         <div className={`input-group ${errors.password ? "error" : ""}`}>
           <div className="input-wrapper">
             <input
@@ -79,10 +74,8 @@ const Login = () => {
           </div>
         </div>
 
-        {/* Firebase error */}
         {errors.firebase && <p className="firebase-error">{errors.firebase}</p>}
 
-        {/* Success message */}
         {success && <p className="login-success">{success}</p>}
 
         <button className="login-btn" onClick={handleSubmit}>

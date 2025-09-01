@@ -6,7 +6,6 @@
   margin-left: 100px;
 }
 
-/* Search bar */
 .search-bar {
   display: flex;
   align-items: center;
@@ -32,14 +31,12 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* Section titles */
 .section-title {
   font-size: 20px;
   font-weight: 500;
   margin: 20px 0 10px;
 }
 
-/* Trending */
 .trending {
   display: flex;
   gap: 20px;
@@ -79,7 +76,6 @@
   margin-top: 5px;
 }
 
-/* Bookmark overlay */
 .bookmark-overlay1 {
   width: 32px;
   height: 32px;
@@ -92,13 +88,13 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 2; /* ensures it sits above the image */
-  transition: background 0.25s ease, transform 0.25s ease; /* ✨ smoother animation */
+  z-index: 2; 
+  transition: background 0.25s ease, transform 0.25s ease;
 }
 
 .bookmark-overlay1:hover {
   background: rgba(255, 255, 255, 0.3);
-  transform: scale(1.1); /* 🔥 slightly bigger hover */
+  transform: scale(1.1);
 }
 
 
@@ -114,7 +110,6 @@
   background-color: #ffffff;
 }
 
-/* Recommended grid */
 .recommended-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -155,7 +150,6 @@
   filter: brightness(0) invert(1);
 }
 
-/* Center Play button overlay */
 .play-overlay-center {
   position: absolute;
   top: 0;
@@ -167,9 +161,9 @@
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s ease;
-  border-radius: 10px; /* match card corners */
-  background-color: rgba(0, 0, 0, 0.3); /* darken on hover */
-  z-index: 1; /* below bookmark */
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1; 
 }
 
 .trending-card:hover .play-overlay-center,
@@ -183,8 +177,8 @@
   gap: 10px;
   padding: 10px 20px;
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 30px; /* pill shape */
-  backdrop-filter: blur(4px); /* optional glassy look */
+  border-radius: 30px; 
+  backdrop-filter: blur(4px); 
   transition: background 0.3s ease, transform 0.3s ease;
   cursor: pointer;
 }

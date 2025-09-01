@@ -5,7 +5,6 @@ import "./Signup.css";
 import movie from "../../assets/movie.png";
 import { useNavigate } from "react-router-dom";
 
-// Email validation function
 const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
 const Signup = () => {
@@ -34,15 +33,13 @@ const Signup = () => {
 
     if (Object.keys(newErrors).length === 0) {
       try {
-        // after successful signup
         await createUserWithEmailAndPassword(auth, email, password);
         setSuccess("Account created successfully!");
         setEmail("");
         setPassword("");
         setRepeatPassword("");
 
-        // ✅ redirect to Navbar instead of /home
-        navigate("/navbar");
+        navigate("/home");
       } catch (err) {
         if (err.code === "auth/email-already-in-use") {
           setErrors({ email: "Email is already in use" });
@@ -59,7 +56,6 @@ const Signup = () => {
       <div className="signup-div">
         <h1 className="signuph1">Sign Up</h1>
 
-        {/* Email */}
         <div className={`input-group ${errors.email ? "error" : ""}`}>
           <div className="input-wrapper">
             <input
@@ -73,7 +69,6 @@ const Signup = () => {
           </div>
         </div>
 
-        {/* Password */}
         <div className={`input-group ${errors.password ? "error" : ""}`}>
           <div className="input-wrapper">
             <input
@@ -89,7 +84,6 @@ const Signup = () => {
           </div>
         </div>
 
-        {/* Repeat Password */}
         <div className={`input-group ${errors.repeatPassword ? "error" : ""}`}>
           <div className="input-wrapper">
             <input

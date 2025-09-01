@@ -6,7 +6,6 @@
   margin-left: 100px;
 }
 
-/* Search bar */
 .tv-search-bar {
   display: flex;
   align-items: center;
@@ -32,17 +31,15 @@
   color: rgba(255, 255, 255, 0.4979);
 }
 
-/* Section title */
 .tv-section-title {
   font-size: 20px;
   font-weight: 500;
   margin: 20px 0 10px;
 }
 
-/* TV grid */
 .tv-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* exactly 4 per row */
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   margin-top: 20px;
 }
@@ -52,7 +49,6 @@
   cursor: pointer;
 }
 
-/* Thumbnail */
 .tv-thumbnail-wrapper {
   position: relative;
 }
@@ -62,7 +58,6 @@
   display: block;
 }
 
-/* Bookmark overlay */
 .tv-bookmark-overlay {
   width: 32px;
   height: 32px;
@@ -75,7 +70,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 2; /* 🔥 keeps it above play overlay */
+  z-index: 2;
   transition: all 0.2s ease;
 }
 
@@ -84,24 +79,20 @@
   height: 14px;
 }
 
-/* Hover effect */
 .tv-bookmark-overlay:hover {
   background: rgba(255, 255, 255, 0.3);
   transform: scale(1.05);
 }
 
-/* Active state */
 .tv-bookmark-overlay.active {
   background: #fff;
 }
 
-/* Active + hover (disable scaling) */
+
 .tv-bookmark-overlay.active:hover {
   transform: none;
 }
 
-
-/* Info */
 .tv-info {
   margin-top: 8px;
 }
@@ -119,10 +110,10 @@
 .tv-category img {
   width: 12px;
   height: 12px;
-  filter: brightness(0) invert(1); /* makes icon white */
+  filter: brightness(0) invert(1);
 }
 
-/* Center Play button overlay (tv specific) */
+
 .tv-play-overlay {
   position: absolute;
   top: 0;
@@ -134,9 +125,9 @@
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s ease;
-  border-radius: 8px; /* match thumbnail */
+  border-radius: 8px;
   background-color: rgba(0, 0, 0, 0.3);
-  z-index: 1; /* below bookmark */
+  z-index: 1;
 }
 
 .tv-thumbnail-wrapper:hover .tv-play-overlay {

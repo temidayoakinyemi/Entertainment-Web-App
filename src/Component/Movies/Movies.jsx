@@ -42,7 +42,6 @@ const Movies = () => {
                 className="movies-thumbnail"
               />
 
-              {/* Play overlay */}
               <div className="movie-play-overlay">
                 <div className="movie-play-button">
                   <img src={play} alt="play" className="movie-play-icon" />
@@ -50,7 +49,6 @@ const Movies = () => {
                 </div>
               </div>
 
-              {/* Bookmark overlay */}
               <div
                 className={`movies-bookmark-overlay ${
                   isBookmarked(item) ? "active" : ""
