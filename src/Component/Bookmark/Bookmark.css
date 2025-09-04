@@ -116,7 +116,7 @@
   transition: opacity 0.3s ease;
   border-radius: 8px;
   background-color: rgba(0, 0, 0, 0.3);
-  z-index: 1; /* ✅ below bookmark overlay */
+  z-index: 1; 
 }
 .bookmark-thumb:hover .bookmark-play-overlay {
   opacity: 1;
@@ -148,4 +148,73 @@
   color: #fff;
   font-size: 16px;
   font-weight: 500;
+}
+
+/* Tablet responsiveness */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .bookmark {
+    margin-left: 20px;
+    padding: 20px;
+  }
+
+  .bookmark-search {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .bookmark-section h2 {
+    font-size: 18px;
+  }
+
+  .bookmark-grid {
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px;
+  }
+
+  .bookmark-meta {
+    font-size: 12px;
+  }
+
+  .bookmark-title {
+    font-size: 15px;
+  }
+
+  .bookmark-play-button span {
+    font-size: 14px;
+  }
+}
+
+/* Mobile responsiveness  */
+@media screen and (max-width: 767px) {
+  .bookmark {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .bookmark-search {
+    width: 100%;
+    margin: 0 auto 20px;
+  }
+
+  .bookmark-section h2 {
+    font-size: 16px;
+    margin: 15px 0 8px;
+  }
+
+  .bookmark-grid {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 12px;
+  }
+
+  .bookmark-meta {
+    font-size: 12px;
+  }
+
+  .bookmark-title {
+    font-size: 14px;
+  }
+
+  .bookmark-play-button span {
+    font-size: 12px;
+  }
 }

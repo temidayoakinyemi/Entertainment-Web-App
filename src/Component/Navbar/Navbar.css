@@ -1,7 +1,7 @@
 .navbar {
   width: 96px;
   height: 700px;
-  background-color: #161D2F; 
+  background-color: #161d2f;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,20 +12,16 @@
   margin-left: 20px;
   margin-top: 20px;
 }
-
 .navbar-logo {
   display: block;
 }
-
 .navbar-logo img {
   width: 35px;
 }
-
 .navbar-icons img {
-    width: 16.2px;
-    height: 20px;
+  width: 16.2px;
+  height: 20px;
 }
-
 .navbar-icons {
   display: flex;
   flex-direction: column;
@@ -34,7 +30,6 @@
   justify-content: center;
   align-items: center;
 }
-
 .nav-icon {
   width: 24px;
   height: 24px;
@@ -43,23 +38,127 @@
   outline: none;
   border: none;
 }
-
 .nav-icon:hover {
   transform: scale(1.1);
 }
-
 .nav-icon.active {
-  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(104%) contrast(105%);
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+    hue-rotate(93deg) brightness(104%) contrast(105%);
 }
-
-
 .logout-icon {
   cursor: pointer;
   display: flex;
   align-items: center;
   margin-bottom: 50px;
 }
-
 .logout-icon:hover {
   opacity: 0.8;
+}
+
+/* Tablet responsiveness */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .navbar {
+    width: 90%;
+    max-width: 900px;
+    height: 72px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    padding: 0 20px;
+    margin: 20px auto;
+    position: relative;
+  }
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+  .navbar-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-left: 210px;
+  }
+  .navbar-icons img {
+    width: 20px;
+    height: 20px;
+  }
+  .nav-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .logout-icon {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+  }
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 599px) {
+  .navbar {
+    width: 100%;
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0; 
+    padding: 0 15px;
+    margin: 0; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #161d2f;
+    z-index: 1000;
+  }
+
+  .navbar-logo {
+    flex: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-logo img {
+    width: 26px;
+    height: auto;
+  }
+
+  .navbar-icons {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    margin-left: 70px;
+  }
+
+  .navbar-icons img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .nav-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .logout-icon {
+    flex: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+  }
+
+  .logout-icon svg {
+    width: 22px;
+    height: 22px;
+  }
 }

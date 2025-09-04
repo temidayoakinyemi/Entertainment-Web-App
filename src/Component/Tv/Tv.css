@@ -161,3 +161,72 @@
   font-size: 16px;
   font-weight: 500;
 }
+
+/* Tablet responsiveness */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .tv-page {
+    margin-left: 20px;
+    padding: 20px;
+  }
+
+  .tv-search-bar {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .tv-section-title {
+    font-size: 18px;
+  }
+
+  .tv-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .tv-info p {
+    font-size: 12px;
+  }
+
+  .tv-info h3 {
+    font-size: 15px;
+  }
+
+  .tv-play-button span {
+    font-size: 14px;
+  }
+}
+
+/* Mobile responsiveness*/
+@media screen and (max-width: 767px) {
+  .tv-page {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .tv-search-bar {
+    width: 100%;
+    margin: 0 auto 20px;
+  }
+
+  .tv-section-title {
+    font-size: 16px;
+    margin: 15px 0 8px;
+  }
+
+  .tv-grid {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 12px;
+  }
+
+  .tv-info p {
+    font-size: 12px;
+  }
+
+  .tv-info h3 {
+    font-size: 14px;
+  }
+
+  .tv-play-button span {
+    font-size: 12px;
+  }
+}

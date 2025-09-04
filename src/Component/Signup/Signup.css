@@ -7,13 +7,11 @@
   align-items: center;
   justify-content: center;
 }
-
 .movie {
   width: 32px;
   height: 26px;
   margin-bottom: 40px;
 }
-
 .signup-div {
   width: 400px;
   background: #161d2f;
@@ -23,24 +21,20 @@
   display: flex;
   flex-direction: column;
 }
-
 .signuph1 {
   color: #ffffff;
   font-weight: 400;
   margin: 0 0 30px 0;
 }
-
 .input-group {
   display: flex;
   flex-direction: column;
   position: relative;
   margin-bottom: 32px;
 }
-
 .input-wrapper {
   position: relative;
 }
-
 .underline-input {
   width: 100%;
   background: transparent;
@@ -55,19 +49,15 @@
   caret-color: #fc4747;
   transition: border-color 0.2s ease;
 }
-
 .underline-input::placeholder {
   color: #8b95a9;
 }
-
 .underline-input:focus {
   border-bottom-color: #ffffff;
 }
-
 .input-group.error .underline-input {
   border-bottom-color: #fc4747;
 }
-
 .input-group .error-text {
   font-size: 13px;
   color: #fc4747;
@@ -78,7 +68,6 @@
   pointer-events: none;
   margin-bottom: -10px;
 }
-
 .signup-btn {
   width: 100%;
   height: 48px;
@@ -92,26 +81,113 @@
   margin-top: 8px;
   transition: background 0.25s ease, color 0.25s ease;
 }
-
 .signup-btn:hover {
   background: #ffffff;
   color: #000000;
 }
-
 .signupp {
   color: #8b95a9;
   font-size: 15px;
   text-align: center;
   margin-top: 20px;
 }
-
 .signupp span {
   color: #fc4747;
   cursor: pointer;
   margin-left: 4px;
 }
-
 .signup-success {
   color: #4caf50;
   margin-bottom: 10px;
+}
+
+/* Tablet responsiveness */
+@media screen and (max-width: 768px) {
+  .signup {
+    padding: 20px;
+  }
+  .signup-div {
+    width: 100%;
+    max-width: 330px;
+    padding: 24px;
+    border-radius: 16px;
+  }
+  .signuph1 {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+  .underline-input {
+    font-size: 12px;
+    padding: 8px 0;
+  }
+  .signup-btn {
+    height: 44px;
+    font-size: 14px;
+  }
+  .signupp {
+    font-size: 13px;
+  }
+  .movie {
+    width: 28px;
+    height: 22px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 480px) {
+  .signup {
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .movie {
+    width: 24px;
+    height: 20px;
+    margin-bottom: 24px;
+    margin-top: 0;
+  }
+
+  .signup-div {
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 14px;
+    margin: 0 auto;
+  }
+
+  .signuph1 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .underline-input {
+    font-size: 12px;
+    padding: 6px 0;
+  }
+
+  .signup-btn {
+    height: 42px;
+    font-size: 13px;
+  }
+
+  .signupp {
+    font-size: 12px;
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  .input-group {
+    margin-bottom: 24px;
+  }
+
+  .input-group .error-text {
+    font-size: 11px;
+    top: 100%;
+    right: 0;
+    transform: none;
+    margin-top: 4px;
+  }
 }

@@ -5,7 +5,6 @@
   color: #fff;
   margin-left: 100px;
 }
-
 .search-bar {
   display: flex;
   align-items: center;
@@ -30,13 +29,11 @@
 .search-bar input::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
-
 .section-title {
   font-size: 20px;
   font-weight: 500;
   margin: 20px 0 10px;
 }
-
 .trending {
   display: flex;
   gap: 20px;
@@ -75,7 +72,6 @@
   font-size: 18px;
   margin-top: 5px;
 }
-
 .bookmark-overlay1 {
   width: 32px;
   height: 32px;
@@ -88,20 +84,16 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 2; 
+  z-index: 2;
   transition: background 0.25s ease, transform 0.25s ease;
 }
-
 .bookmark-overlay1:hover {
   background: rgba(255, 255, 255, 0.3);
   transform: scale(1.1);
 }
-
-
 .bookmark-overlay1.active:hover {
   transform: none;
 }
-
 .bookmark-overlay img {
   width: 11px;
   height: 14px;
@@ -109,7 +101,6 @@
 .bookmark-overlay1.active {
   background-color: #ffffff;
 }
-
 .recommended-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -149,7 +140,6 @@
   height: 12px;
   filter: brightness(0) invert(1);
 }
-
 .play-overlay-center {
   position: absolute;
   top: 0;
@@ -163,38 +153,117 @@
   transition: opacity 0.3s ease;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.3);
-  z-index: 1; 
+  z-index: 1;
 }
-
 .trending-card:hover .play-overlay-center,
 .recommended-thumb-wrapper:hover .play-overlay-center {
   opacity: 1;
 }
-
 .play-button {
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 10px 20px;
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 30px; 
-  backdrop-filter: blur(4px); 
+  border-radius: 30px;
+  backdrop-filter: blur(4px);
   transition: background 0.3s ease, transform 0.3s ease;
   cursor: pointer;
 }
-
 .play-button:hover {
   background: rgba(255, 255, 255, 0.3);
   transform: scale(1.05);
 }
-
 .play-button .play-icon {
   width: 20px;
   height: 20px;
 }
-
 .play-button span {
   color: #fff;
   font-size: 16px;
   font-weight: 500;
+}
+
+/* Tablet responsiveness */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .home {
+    margin-left: 20px;
+    padding: 20px;
+  }
+  .search-bar {
+    width: 100%;
+    max-width: 500px;
+  }
+  .trending-card {
+    min-width: 280px;
+  }
+  .trending-img {
+    height: 160px;
+  }
+  .recommended-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+  }
+  .recommended-thumb {
+    height: 130px;
+  }
+  .section-title {
+    font-size: 18px;
+  }
+  .trending-info p,
+  .recommended-info p {
+    font-size: 12px;
+  }
+  .trending-info h3,
+  .recommended-info h3 {
+    font-size: 15px;
+  }
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 767px) {
+  .home {
+    margin-left: 0;
+    padding: 80px 16px 20px;
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: none;
+  }
+
+  .trending {
+    gap: 12px;
+  }
+
+  .trending-card {
+    min-width: 240px;
+  }
+
+  .trending-img {
+    height: 140px;
+  }
+
+  .recommended-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+  }
+
+  .recommended-thumb {
+    height: 110px;
+  }
+
+  .section-title {
+    font-size: 16px;
+  }
+
+  .trending-info h3,
+  .recommended-info h3 {
+    font-size: 14px;
+  }
+
+  .trending-info p,
+  .recommended-info p {
+    font-size: 11px;
+  }
 }
